@@ -1,0 +1,17 @@
+# Python Delivery System Solver
+# Requirements: Python 3.8+
+#
+# This project uses only Python standard library modules:
+# - json: JSON parsing
+# - math: Mathematical operations (sqrt)
+# - dataclasses: Data classes
+# - typing: Type hints
+# - pathlib: Path operations
+# - sys: Command-line arguments
+#
+# No external packages required for core functionality.
+#
+# For development/testing (optional):
+# pytest>=7.0.0  # For advanced testing (not currently used)
+# mypy>=1.0.0    # For static type checking
+# black>=23.0.0  # For code formatting

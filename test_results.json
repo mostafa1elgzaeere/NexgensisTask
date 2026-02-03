@@ -1,0 +1,726 @@
+[
+  {
+    "test": "test_case_1",
+    "passed": true,
+    "message": "Total distance: 294.92",
+    "output": {
+      "total_distance": 294.92,
+      "assignments": {
+        "A1": [
+          {
+            "package_id": "P2",
+            "warehouse_id": "W2",
+            "distance": 19.25
+          },
+          {
+            "package_id": "P4",
+            "warehouse_id": "W2",
+            "distance": 18.64
+          },
+          {
+            "package_id": "P6",
+            "warehouse_id": "W3",
+            "distance": 10.68
+          },
+          {
+            "package_id": "P10",
+            "warehouse_id": "W2",
+            "distance": 27.27
+          }
+        ],
+        "A2": [
+          {
+            "package_id": "P12",
+            "warehouse_id": "W4",
+            "distance": 34.16
+          }
+        ],
+        "A3": [
+          {
+            "package_id": "P1",
+            "warehouse_id": "W5",
+            "distance": 11.22
+          },
+          {
+            "package_id": "P3",
+            "warehouse_id": "W5",
+            "distance": 16.57
+          },
+          {
+            "package_id": "P5",
+            "warehouse_id": "W5",
+            "distance": 23.99
+          },
+          {
+            "package_id": "P7",
+            "warehouse_id": "W5",
+            "distance": 23.58
+          },
+          {
+            "package_id": "P8",
+            "warehouse_id": "W4",
+            "distance": 31.64
+          },
+          {
+            "package_id": "P9",
+            "warehouse_id": "W1",
+            "distance": 27.94
+          },
+          {
+            "package_id": "P11",
+            "warehouse_id": "W5",
+            "distance": 50.01
+          }
+        ],
+        "A4": []
+      },
+      "statistics": {
+        "total_packages": 12,
+        "total_agents": 4,
+        "total_warehouses": 5,
+        "average_distance_per_package": 24.58
+      }
+    }
+  },
+  {
+    "test": "test_case_2",
+    "passed": true,
+    "message": "Total distance: 254.04",
+    "output": {
+      "total_distance": 254.04,
+      "assignments": {
+        "A1": [
+          {
+            "package_id": "P1",
+            "warehouse_id": "W2",
+            "distance": 67.95
+          },
+          {
+            "package_id": "P2",
+            "warehouse_id": "W2",
+            "distance": 21.86
+          },
+          {
+            "package_id": "P3",
+            "warehouse_id": "W1",
+            "distance": 21.87
+          },
+          {
+            "package_id": "P4",
+            "warehouse_id": "W1",
+            "distance": 17.28
+          },
+          {
+            "package_id": "P6",
+            "warehouse_id": "W1",
+            "distance": 17.28
+          },
+          {
+            "package_id": "P8",
+            "warehouse_id": "W2",
+            "distance": 17.06
+          },
+          {
+            "package_id": "P9",
+            "warehouse_id": "W1",
+            "distance": 20.75
+          }
+        ],
+        "A2": [
+          {
+            "package_id": "P5",
+            "warehouse_id": "W3",
+            "distance": 32.29
+          },
+          {
+            "package_id": "P7",
+            "warehouse_id": "W3",
+            "distance": 21.26
+          },
+          {
+            "package_id": "P10",
+            "warehouse_id": "W3",
+            "distance": 16.43
+          }
+        ],
+        "A3": []
+      },
+      "statistics": {
+        "total_packages": 10,
+        "total_agents": 3,
+        "total_warehouses": 3,
+        "average_distance_per_package": 25.4
+      }
+    }
+  },
+  {
+    "test": "test_case_3",
+    "passed": true,
+    "message": "Total distance: 159.53",
+    "output": {
+      "total_distance": 159.53,
+      "assignments": {
+        "A1": [],
+        "A2": [
+          {
+            "package_id": "P1",
+            "warehouse_id": "W3",
+            "distance": 64.18
+          },
+          {
+            "package_id": "P4",
+            "warehouse_id": "W3",
+            "distance": 11.18
+          }
+        ],
+        "A3": [
+          {
+            "package_id": "P2",
+            "warehouse_id": "W2",
+            "distance": 18.27
+          },
+          {
+            "package_id": "P3",
+            "warehouse_id": "W2",
+            "distance": 22.51
+          },
+          {
+            "package_id": "P6",
+            "warehouse_id": "W2",
+            "distance": 20.16
+          }
+        ],
+        "A4": [
+          {
+            "package_id": "P5",
+            "warehouse_id": "W4",
+            "distance": 23.23
+          }
+        ]
+      },
+      "statistics": {
+        "total_packages": 6,
+        "total_agents": 4,
+        "total_warehouses": 4,
+        "average_distance_per_package": 26.59
+      }
+    }
+  },
+  {
+    "test": "test_case_4",
+    "passed": true,
+    "message": "Total distance: 276.89",
+    "output": {
+      "total_distance": 276.89,
+      "assignments": {
+        "A1": [
+          {
+            "package_id": "P3",
+            "warehouse_id": "W5",
+            "distance": 36.99
+          },
+          {
+            "package_id": "P4",
+            "warehouse_id": "W5",
+            "distance": 19.86
+          },
+          {
+            "package_id": "P6",
+            "warehouse_id": "W5",
+            "distance": 13.11
+          }
+        ],
+        "A2": [
+          {
+            "package_id": "P1",
+            "warehouse_id": "W4",
+            "distance": 45.37
+          },
+          {
+            "package_id": "P5",
+            "warehouse_id": "W4",
+            "distance": 11.07
+          },
+          {
+            "package_id": "P10",
+            "warehouse_id": "W4",
+            "distance": 12.72
+          }
+        ],
+        "A3": [
+          {
+            "package_id": "P2",
+            "warehouse_id": "W2",
+            "distance": 18.09
+          },
+          {
+            "package_id": "P7",
+            "warehouse_id": "W2",
+            "distance": 20.81
+          },
+          {
+            "package_id": "P8",
+            "warehouse_id": "W2",
+            "distance": 22.26
+          },
+          {
+            "package_id": "P9",
+            "warehouse_id": "W2",
+            "distance": 20.49
+          },
+          {
+            "package_id": "P11",
+            "warehouse_id": "W2",
+            "distance": 22.1
+          },
+          {
+            "package_id": "P12",
+            "warehouse_id": "W1",
+            "distance": 34.02
+          }
+        ],
+        "A4": [],
+        "A5": []
+      },
+      "statistics": {
+        "total_packages": 12,
+        "total_agents": 5,
+        "total_warehouses": 5,
+        "average_distance_per_package": 23.07
+      }
+    }
+  },
+  {
+    "test": "test_case_5",
+    "passed": true,
+    "message": "Total distance: 272.56",
+    "output": {
+      "total_distance": 272.56,
+      "assignments": {
+        "A1": [],
+        "A2": [],
+        "A3": [
+          {
+            "package_id": "P1",
+            "warehouse_id": "W1",
+            "distance": 27.82
+          },
+          {
+            "package_id": "P4",
+            "warehouse_id": "W1",
+            "distance": 16.66
+          },
+          {
+            "package_id": "P5",
+            "warehouse_id": "W3",
+            "distance": 14.52
+          },
+          {
+            "package_id": "P6",
+            "warehouse_id": "W1",
+            "distance": 23.06
+          },
+          {
+            "package_id": "P8",
+            "warehouse_id": "W3",
+            "distance": 26.97
+          }
+        ],
+        "A4": [
+          {
+            "package_id": "P2",
+            "warehouse_id": "W5",
+            "distance": 70.47
+          },
+          {
+            "package_id": "P3",
+            "warehouse_id": "W5",
+            "distance": 13.1
+          },
+          {
+            "package_id": "P7",
+            "warehouse_id": "W5",
+            "distance": 17.85
+          },
+          {
+            "package_id": "P9",
+            "warehouse_id": "W2",
+            "distance": 45.4
+          },
+          {
+            "package_id": "P10",
+            "warehouse_id": "W2",
+            "distance": 16.7
+          }
+        ],
+        "A5": []
+      },
+      "statistics": {
+        "total_packages": 10,
+        "total_agents": 5,
+        "total_warehouses": 5,
+        "average_distance_per_package": 27.26
+      }
+    }
+  },
+  {
+    "test": "test_case_6",
+    "passed": true,
+    "message": "Total distance: 202.93",
+    "output": {
+      "total_distance": 202.93,
+      "assignments": {
+        "A1": [
+          {
+            "package_id": "P3",
+            "warehouse_id": "W3",
+            "distance": 21.26
+          }
+        ],
+        "A2": [],
+        "A3": [
+          {
+            "package_id": "P1",
+            "warehouse_id": "W2",
+            "distance": 30.99
+          },
+          {
+            "package_id": "P7",
+            "warehouse_id": "W2",
+            "distance": 16.87
+          },
+          {
+            "package_id": "P8",
+            "warehouse_id": "W2",
+            "distance": 15.87
+          },
+          {
+            "package_id": "P9",
+            "warehouse_id": "W2",
+            "distance": 18.83
+          }
+        ],
+        "A4": [
+          {
+            "package_id": "P2",
+            "warehouse_id": "W1",
+            "distance": 55.54
+          },
+          {
+            "package_id": "P4",
+            "warehouse_id": "W1",
+            "distance": 15.88
+          },
+          {
+            "package_id": "P5",
+            "warehouse_id": "W1",
+            "distance": 15.26
+          },
+          {
+            "package_id": "P6",
+            "warehouse_id": "W1",
+            "distance": 12.43
+          }
+        ]
+      },
+      "statistics": {
+        "total_packages": 9,
+        "total_agents": 4,
+        "total_warehouses": 4,
+        "average_distance_per_package": 22.55
+      }
+    }
+  },
+  {
+    "test": "test_case_7",
+    "passed": true,
+    "message": "Total distance: 204.38",
+    "output": {
+      "total_distance": 204.38,
+      "assignments": {
+        "A1": [],
+        "A2": [
+          {
+            "package_id": "P4",
+            "warehouse_id": "W2",
+            "distance": 37.66
+          }
+        ],
+        "A3": [
+          {
+            "package_id": "P3",
+            "warehouse_id": "W4",
+            "distance": 34.44
+          },
+          {
+            "package_id": "P6",
+            "warehouse_id": "W4",
+            "distance": 4.47
+          },
+          {
+            "package_id": "P7",
+            "warehouse_id": "W4",
+            "distance": 9.45
+          },
+          {
+            "package_id": "P8",
+            "warehouse_id": "W1",
+            "distance": 29.62
+          },
+          {
+            "package_id": "P9",
+            "warehouse_id": "W1",
+            "distance": 15.3
+          },
+          {
+            "package_id": "P10",
+            "warehouse_id": "W1",
+            "distance": 12.17
+          }
+        ],
+        "A4": [
+          {
+            "package_id": "P1",
+            "warehouse_id": "W3",
+            "distance": 25.03
+          },
+          {
+            "package_id": "P2",
+            "warehouse_id": "W3",
+            "distance": 19.0
+          },
+          {
+            "package_id": "P5",
+            "warehouse_id": "W3",
+            "distance": 17.25
+          }
+        ]
+      },
+      "statistics": {
+        "total_packages": 10,
+        "total_agents": 4,
+        "total_warehouses": 4,
+        "average_distance_per_package": 20.44
+      }
+    }
+  },
+  {
+    "test": "test_case_8",
+    "passed": true,
+    "message": "Total distance: 238.87",
+    "output": {
+      "total_distance": 238.87,
+      "assignments": {
+        "A1": [
+          {
+            "package_id": "P1",
+            "warehouse_id": "W5",
+            "distance": 25.24
+          }
+        ],
+        "A2": [
+          {
+            "package_id": "P2",
+            "warehouse_id": "W2",
+            "distance": 11.61
+          },
+          {
+            "package_id": "P3",
+            "warehouse_id": "W1",
+            "distance": 51.05
+          },
+          {
+            "package_id": "P4",
+            "warehouse_id": "W1",
+            "distance": 13.7
+          },
+          {
+            "package_id": "P9",
+            "warehouse_id": "W1",
+            "distance": 10.48
+          },
+          {
+            "package_id": "P11",
+            "warehouse_id": "W1",
+            "distance": 14.6
+          }
+        ],
+        "A3": [
+          {
+            "package_id": "P5",
+            "warehouse_id": "W4",
+            "distance": 28.41
+          },
+          {
+            "package_id": "P6",
+            "warehouse_id": "W2",
+            "distance": 15.2
+          },
+          {
+            "package_id": "P7",
+            "warehouse_id": "W4",
+            "distance": 15.38
+          },
+          {
+            "package_id": "P8",
+            "warehouse_id": "W2",
+            "distance": 21.22
+          },
+          {
+            "package_id": "P10",
+            "warehouse_id": "W4",
+            "distance": 31.96
+          }
+        ],
+        "A4": []
+      },
+      "statistics": {
+        "total_packages": 11,
+        "total_agents": 4,
+        "total_warehouses": 5,
+        "average_distance_per_package": 21.72
+      }
+    }
+  },
+  {
+    "test": "test_case_9",
+    "passed": true,
+    "message": "Total distance: 191.39",
+    "output": {
+      "total_distance": 191.39,
+      "assignments": {
+        "A1": [
+          {
+            "package_id": "P1",
+            "warehouse_id": "W3",
+            "distance": 33.34
+          },
+          {
+            "package_id": "P2",
+            "warehouse_id": "W3",
+            "distance": 16.33
+          },
+          {
+            "package_id": "P3",
+            "warehouse_id": "W3",
+            "distance": 11.22
+          }
+        ],
+        "A2": [
+          {
+            "package_id": "P5",
+            "warehouse_id": "W2",
+            "distance": 28.68
+          },
+          {
+            "package_id": "P8",
+            "warehouse_id": "W2",
+            "distance": 10.88
+          }
+        ],
+        "A3": [
+          {
+            "package_id": "P4",
+            "warehouse_id": "W1",
+            "distance": 50.53
+          },
+          {
+            "package_id": "P6",
+            "warehouse_id": "W1",
+            "distance": 23.39
+          },
+          {
+            "package_id": "P7",
+            "warehouse_id": "W1",
+            "distance": 17.01
+          }
+        ],
+        "A4": []
+      },
+      "statistics": {
+        "total_packages": 8,
+        "total_agents": 4,
+        "total_warehouses": 3,
+        "average_distance_per_package": 23.92
+      }
+    }
+  },
+  {
+    "test": "test_case_10",
+    "passed": true,
+    "message": "Total distance: 267.54",
+    "output": {
+      "total_distance": 267.54,
+      "assignments": {
+        "A1": [],
+        "A2": [
+          {
+            "package_id": "P1",
+            "warehouse_id": "W5",
+            "distance": 22.56
+          },
+          {
+            "package_id": "P3",
+            "warehouse_id": "W5",
+            "distance": 15.54
+          }
+        ],
+        "A3": [
+          {
+            "package_id": "P4",
+            "warehouse_id": "W1",
+            "distance": 53.51
+          },
+          {
+            "package_id": "P8",
+            "warehouse_id": "W4",
+            "distance": 49.13
+          },
+          {
+            "package_id": "P10",
+            "warehouse_id": "W1",
+            "distance": 49.25
+          }
+        ],
+        "A4": [
+          {
+            "package_id": "P2",
+            "warehouse_id": "W3",
+            "distance": 25.04
+          },
+          {
+            "package_id": "P5",
+            "warehouse_id": "W3",
+            "distance": 14.95
+          },
+          {
+            "package_id": "P6",
+            "warehouse_id": "W3",
+            "distance": 15.01
+          },
+          {
+            "package_id": "P7",
+            "warehouse_id": "W3",
+            "distance": 10.84
+          },
+          {
+            "package_id": "P9",
+            "warehouse_id": "W3",
+            "distance": 5.4
+          },
+          {
+            "package_id": "P11",
+            "warehouse_id": "W3",
+            "distance": 6.32
+          }
+        ]
+      },
+      "statistics": {
+        "total_packages": 11,
+        "total_agents": 4,
+        "total_warehouses": 5,
+        "average_distance_per_package": 24.32
+      }
+    }
+  }
+]
