@@ -1,0 +1,6 @@
+Agent ID,Package ID,Warehouse ID,Warehouse Location,Destination,Distance,Delay (seconds)
+A1,P1,W1,"(0, 0)","(30, 40)",57.07,10.34
+A2,P2,W2,"(50, 75)","(70, 90)",43.03,16.52
+A3,P3,W3,"(100, 25)","(105, 20)",14.14,19.55
+A_SUPER,P4,W1,"(0, 0)","(10, 10)",49.50,23.81
+A2,P5,W2,"(50, 75)","(40, 80)",36.18,13.29

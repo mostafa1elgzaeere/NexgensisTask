@@ -2,6 +2,15 @@
 
 A production-quality Python solution for optimizing package delivery assignments to agents, minimizing total travel distance.
 
+## ✨ Bonus Tasks Implemented (4/4)
+
+✅ **1. Random Delivery Delays** - Simulates realistic delivery times with configurable random delays  
+✅ **2. ASCII Route Visualization** - Text-based visualization showing agent routes step-by-step  
+✅ **3. Dynamic Agent Joining** - Agents can join mid-delivery to handle additional packages  
+✅ **4. Export to CSV** - Export results to CSV format for analysis in Excel/spreadsheets  
+
+See [Bonus Features](#bonus-features) section below for details.
+
 ## Problem Statement
 
 The system assigns delivery packages to agents where:
@@ -58,8 +67,16 @@ For each package P:
 ├── models.py          # Data classes (Location, Warehouse, Agent, Package, Assignment)
 ├── utils.py           # Helper functions (distance calc, JSON I/O)
 ├── solver.py          # Core optimization logic
-├── main.py            # CLI entry point
+```
+.
+├── models.py          # Data classes (Location, Warehouse, Agent, Package, Assignment)
+├── utils.py           # Helper functions (distance calc, JSON I/O)
+├── solver.py          # Core optimization logic with bonus features
+├── main.py            # CLI entry point with bonus task options
 ├── test_runner.py     # Automated test suite
+├── csv_exporter.py    # CSV export functionality (BONUS TASK)
+├── visualize.py       # ASCII route visualization (BONUS TASK)
+├── demo_bonus.py      # Demo script for all bonus features
 ├── README.md          # This file
 ├── base_case.json     # Base test case
 └── Python Assignment(Delivery System Test Cases)/
@@ -84,10 +101,50 @@ cd "Python Assignment -2026"
 
 ## Usage
 
-### Run a Single Case
+### Basic Usage
 
 ```bash
+# Run with default settings
 python main.py base_case.json
+
+# Save output to JSON file
+python main.py base_case.json --output result.json
+```
+
+### 🎁 Bonus Features Usage
+
+```bash
+# Enable random delivery delays (5-30 seconds per delivery)
+python main.py base_case.json --delays
+
+# Export results to CSV
+python main.py base_case.json --csv results.csv --csv-summary summary.csv
+
+# Enable dynamic agent joining (agents join mid-delivery)
+python main.py base_case.json --dynamic-agents
+
+# Combine all bonus features
+python main.py base_case.json --delays --dynamic-agents --csv full_results.csv
+
+# ASCII visualization (separate script)
+python visualize.py base_case.json
+
+# Run demo of ALL bonus tasks
+python demo_bonus.py
+```
+
+### Command-Line Options
+
+```
+positional arguments:
+  input_file            Input JSON file with delivery data
+
+optional arguments:
+  --output, -o FILE     Save JSON output to FILE
+  --csv FILE            Export assignments to CSV (BONUS TASK)
+  --csv-summary FILE    Export summary statistics to CSV
+  --delays              Enable random delivery delays (BONUS TASK)
+  --dynamic-agents      Enable dynamic agent joining (BONUS TASK)
 ```
 
 Output will show:
@@ -235,6 +292,132 @@ Comprehensive exception handling for:
 - **Small scale** (p < 1000, a < 100): < 1 second
 - **Medium scale** (p < 10000, a < 500): < 10 seconds
 - **Large scale** (p > 10000): Consider parallel processing or advanced algorithms
+
+## Bonus Features
+
+### 🎲 1. Random Delivery Delays
+
+Simulates realistic delivery scenarios with random delays per package.
+
+**How it works:**
+- Each delivery gets a random delay between configurable min/max values (default: 5-30 seconds)
+- Delays are tracked per assignment and included in output
+- Useful for capacity planning and time estimation
+
+**Usage:**
+```bash
+python main.py base_case.json --delays
+```
+
+**Example output:**
+```
+Agent A1: 2 packages, distance: 121.21, delay: 42.35s
+  - P1: distance 57.07, delay: 18.23s
+  - P4: distance 64.14, delay: 24.12s
+```
+
+### 🗺️ 2. ASCII Route Visualization
+
+Text-based visualization showing complete delivery routes.
+
+**Features:**
+- Shows initial positions of all agents and warehouses
+- Step-by-step route for each agent
+- Visual representation of: location → warehouse → destination
+- Displays distances and delays (if enabled)
+
+**Usage:**
+```bash
+python visualize.py base_case.json
+```
+
+**Sample output:**
+```
+A1: 2 packages, total distance: 121.21
+  1. P1:
+     Route: (5, 5) → (0, 0) (W1) → (30, 40)
+     Distance: 57.07
+  2. P4:
+     Route: (30, 40) → (0, 0) (W1) → (10, 10)
+     Distance: 64.14
+```
+
+### 🚀 3. Dynamic Agent Joining
+
+Allows new agents to join mid-delivery to handle additional load.
+
+**How it works:**
+- Agents can be scheduled to join after processing N packages
+- New agents start at specified locations
+- System automatically assigns packages to newly joined agents
+- Useful for modeling real-world scenarios with backup drivers
+
+**Usage:**
+```bash
+python main.py base_case.json --dynamic-agents
+```
+
+**In code:**
+```python
+solver = DeliverySystemSolver(warehouses, agents, packages, 
+                              enable_dynamic_agents=True)
+new_agent = Agent(id="A_BACKUP", location=Location(50, 50))
+solver.add_dynamic_agent(new_agent, join_after_packages=5)
+```
+
+**Output:**
+```
+[Dynamic] Agent A_BACKUP joined at package #6
+```
+
+### 📊 4. Export to CSV
+
+Export results to CSV format for analysis in Excel, Google Sheets, etc.
+
+**Features:**
+- **Detailed CSV**: All assignments with agent, package, warehouse, distance, delays
+- **Summary CSV**: Statistics per agent (total packages, distance, delays)
+- Compatible with all spreadsheet software
+
+**Usage:**
+```bash
+# Export detailed assignments
+python main.py base_case.json --csv assignments.csv
+
+# Export summary statistics
+python main.py base_case.json --csv-summary summary.csv
+
+# Export both
+python main.py base_case.json --csv assignments.csv --csv-summary summary.csv
+```
+
+**CSV Format (assignments.csv):**
+```
+Agent ID,Package ID,Warehouse ID,Warehouse Location,Destination,Distance,Delay (seconds)
+A1,P1,W1,"(0, 0)","(30, 40)",57.07,18.23
+A1,P4,W1,"(0, 0)","(10, 10)",64.14,24.12
+```
+
+**CSV Format (summary.csv):**
+```
+Agent ID,Packages Delivered,Total Distance,Total Delay (seconds),Average Distance per Package
+A1,2,121.21,42.35,60.61
+A2,2,79.21,35.67,39.61
+```
+
+### 🎯 Demo All Bonus Features
+
+Run the demo script to see all bonus features in action:
+
+```bash
+python demo_bonus.py
+```
+
+This will demonstrate:
+- Random delays with statistics
+- Dynamic agent joining
+- CSV export
+- All features combined
 
 ## Testing
 

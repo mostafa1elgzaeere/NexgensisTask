@@ -66,12 +66,17 @@ class Assignment:
         package_id: ID of the package to deliver
         total_distance: Total distance the agent needs to travel
                        (agent location -> warehouse -> destination)
+        delay: Random delivery delay in seconds (for simulation)
+        timestamp: When this assignment was made (for dynamic agents)
     """
     agent_id: str
     package_id: str
     warehouse_id: str
     total_distance: float
+    delay: float = 0.0
+    timestamp: int = 0
     
     def __repr__(self) -> str:
         return (f"Assignment({self.agent_id} delivers {self.package_id} "
-                f"from {self.warehouse_id}, distance: {self.total_distance:.2f})")
+                f"from {self.warehouse_id}, distance: {self.total_distance:.2f}, "
+                f"delay: {self.delay:.2f}s)")

@@ -47,6 +47,9 @@ def visualize_solution(input_file: str) -> None:
     print("-" * 80)
     
     total_distance = 0
+    total_delay = 0
+    has_delays = any(a.delay > 0 for a in assignments)
+    
     for agent_id in sorted(agents.keys()):
         agent_pkgs = agent_assignments[agent_id]
         if not agent_pkgs:
@@ -54,23 +57,29 @@ def visualize_solution(input_file: str) -> None:
             continue
         
         agent_distance = sum(a.total_distance for a in agent_pkgs)
+        agent_delay = sum(a.delay for a in agent_pkgs)
         total_distance += agent_distance
+        total_delay += agent_delay
         
-        print(f"\n{agent_id}: {len(agent_pkgs)} package(s), total distance: {agent_distance:.2f}")
+        delay_str = f", total delay: {agent_delay:.2f}s" if has_delays else ""
+        print(f"\n{agent_id}: {len(agent_pkgs)} package(s), total distance: {agent_distance:.2f}{delay_str}")
         
         current_loc = agents[agent_id].location
         for i, assignment in enumerate(agent_pkgs, 1):
             warehouse = warehouses[assignment.warehouse_id]
             package = next(p for p in packages if p.id == assignment.package_id)
             
+            delay_info = f", delay: {assignment.delay:.2f}s" if has_delays else ""
             print(f"  {i}. {assignment.package_id}:")
             print(f"     Route: {current_loc} → {warehouse.location} ({assignment.warehouse_id}) → {package.destination}")
-            print(f"     Distance: {assignment.total_distance:.2f}")
+            print(f"     Distance: {assignment.total_distance:.2f}{delay_info}")
             
             current_loc = package.destination
     
     print(f"\n{'-'*80}")
     print(f"TOTAL DISTANCE: {total_distance:.2f} units")
+    if has_delays:
+        print(f"TOTAL DELAYS: {total_delay:.2f} seconds")
     print(f"{'='*80}\n")
 
 
